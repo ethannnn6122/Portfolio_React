@@ -13,9 +13,12 @@ const theme = {
 
 function App() {
   return (
-    <Grommet theme={theme} full>
-      <HomeContainer/>
-    </Grommet>
+    <div>
+      <Grommet theme={theme} full>
+        <HomeContainer/>
+      </Grommet>
+    </div>
+    
   );
 }
 

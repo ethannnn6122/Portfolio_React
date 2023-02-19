@@ -1,25 +1,46 @@
 import React from "react";
-import {  Box, PageHeader } from "grommet";
+import { Paragraph ,Box, PageHeader, Image } from "grommet";
 import NavBar from "../components/NavBar";
+import IntroductionComp from "../components/IntroductionComp";
 
 const HomeContainer = () => {
     
     const styles = {
-        marginLeft: "auto",
-        marginRight: "auto",
-        padding: "2em",
-        width: "65em",
-        backgroundColor: "#74FCDA",
+        color: "#4A1B8C",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+    }
+    const imgStyles = {
+        marginBottom: "2em"
     }
     
     return (
-        <Box >
+        <Box>
             <NavBar/>
-            <PageHeader
-                style={styles}
-                title="Portfolio of Ethan Gruenemeier"
-                subtitle="A history of work that might be interesting"
-            />
+            <Box style={styles}>
+                <PageHeader style={{color: "#4A1B8C"}}
+                    title="Student, Developer, & Designer"
+                    subtitle="I love designing and building cool websites."
+                />
+                <Box style={imgStyles} height="small" width="small">
+                    <Image fit="cover" style={{borderRadius: "2em"}}
+                        src={process.env.PUBLIC_URL + "/images/EthanClipArt.jpg"}/>
+                </Box>
+                <Box style={imgStyles} height="medium" width="large">
+                    <Image fit="cover" style={{borderRadius: "2em"}}
+                        src={process.env.PUBLIC_URL + "/images/techClipArt.png"}/>
+                </Box>
+                <Box style={{background: "#A676A3", width: "100%", height: "15em", display: "flex", alignItems: "center",
+                            justifyContent: "center"}}>
+                    <Paragraph style={{}}>
+                            Hello, My name is Ethan Gruenemeier. I am current a University student in my third year at Northern
+                            Arizona University. I enjoy frontend web development and am currently expanding my knowledge of backend 
+                            develpment.
+                    </Paragraph>
+                </Box>
+            </Box>
+            <IntroductionComp />
         </Box>
     );
 }
