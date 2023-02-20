@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Box, Collapsible, Nav, Sidebar, Button, Header} from "grommet";
-import { Menu, Help, Projects, FormClose, Home, Linkedin, Github} from "grommet-icons";
+import { Menu, Help, Projects, FormClose, Home, Linkedin, Github, Contact} from "grommet-icons";
 
 const NavBar = () => {
     const [open, setOpen] = React.useState(false);
@@ -38,11 +39,21 @@ const NavBar = () => {
                 <Box>
                     <Sidebar style={boxStyle}>
                         <Nav style={sideBar} gap="medium">
-                            <Button style={btn} icon={<Home color="#F2C49B" />} hoverIndicator label="Home" />
-                            <Button style={btn} icon={<Projects color="#F2C49B" />} hoverIndicator label="Projects"/>
-                            <Button style={btn} icon={<Linkedin color="#F2C49B" />} hoverIndicator label="Skills" />
-                            <Button style={btn} icon={<Github color="#F2C49B"/>} hoverIndicator label="Contact Me" />
-                            <Button style={btn} icon={<Help color="#F2C49B"/>} hoverIndicator label="About" />
+                            <Link style={{ textDecoration: "none" }} to="/">
+                                <Button style={btn} icon={<Home color="#F2C49B" />} hoverIndicator label="Home" />
+                            </Link>  
+                            <Link style={{ textDecoration: "none" }} to="/projects">
+                                <Button style={btn} icon={<Projects color="#F2C49B" />} hoverIndicator label="Projects"/>
+                            </Link>
+                            <Link style={{ textDecoration: "none" }} to="/skills">
+                                <Button style={btn} icon={<Linkedin color="#F2C49B" />} hoverIndicator label="Skills" />
+                            </Link> 
+                            <Link style={{ textDecoration: "none" }} to="/contact">
+                                <Button style={btn} icon={<Contact color="#F2C49B"/>} hoverIndicator label="Contact Me" />
+                            </Link>
+                            <Link style={{ textDecoration: "none" }} to="/about">
+                                <Button style={btn} icon={<Help color="#F2C49B"/>} hoverIndicator label="About" />
+                            </Link>
                         </Nav>
                     </Sidebar>
                 </Box>
