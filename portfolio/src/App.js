@@ -1,23 +1,22 @@
 import { Grommet } from 'grommet';
 import HomeContainer from './containers/HomeContainer';
+import FooterComp from './components/FooterComp';
 
 const theme = {
   global: {
     font: {
-      family: "Roboto",
-      size: "18px",
-      height: "20px",
-    },
+      family: "Josefin Sans",
+      size: "18px"
+    }
   },
 };
 
 function App() {
   return (
-    <div>
       <Grommet theme={theme} full>
         <HomeContainer/>
+        <FooterComp/>
       </Grommet>
-    </div>
     
   );
 }

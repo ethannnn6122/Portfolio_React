@@ -34,7 +34,7 @@ const HomeContainer = () => {
                 <Box style={{background: "#A676A3", width: "100%", height: "15em", display: "flex", alignItems: "center",
                             justifyContent: "center"}}>
                     <Paragraph style={{}}>
-                            Hello, My name is Ethan Gruenemeier. I am current a University student in my third year at Northern
+                            Hello, My name is Ethan Gruenemeier. I am currently a University student in my third year at Northern
                             Arizona University. I enjoy frontend web development and am currently expanding my knowledge of backend 
                             develpment.
                     </Paragraph>

@@ -5,7 +5,7 @@ import { Favorite, ShareOption } from "grommet-icons";
 const IntroductionComp = () => {
     return(
         <Box style={{ display: "flex", flexDirection: "row" }}>
-            <Card height="large" width="medium">
+            <Card style={{flex: 1, marginLeft: "2em"}} height="medium" width="medium">
                 <CardHeader pad="medium">Header</CardHeader>
                 <CardBody pad="medium">Body</CardBody>
                 <CardFooter pad={{horizontal: "small"}} background="light-2">
@@ -16,7 +16,7 @@ const IntroductionComp = () => {
                     <Button icon={<ShareOption color="plain" />} hoverIndicator />
                 </CardFooter>
             </Card>
-            <Card height="large" width="medium">
+            <Card style={{flex: 1}} height="medium" width="medium">
                 <CardHeader pad="medium">Header</CardHeader>
                 <CardBody pad="medium">Body</CardBody>
                 <CardFooter pad={{horizontal: "small"}} background="light-2">
@@ -27,7 +27,7 @@ const IntroductionComp = () => {
                     <Button icon={<ShareOption color="plain" />} hoverIndicator />
                 </CardFooter>
             </Card>
-            <Card height="large" width="medium">
+            <Card style={{flex: 1, marginRight: "2em"}} height="medium" width="medium">
                 <CardHeader pad="medium">Header</CardHeader>
                 <CardBody pad="medium">Body</CardBody>
                 <CardFooter pad={{horizontal: "small"}} background="light-2">
