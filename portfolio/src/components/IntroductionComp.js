@@ -3,12 +3,16 @@ import { Box, Card, CardHeader, CardBody, CardFooter, Button } from "grommet";
 import { Brush, Book, Code, Test} from "grommet-icons";
 
 const IntroductionComp = () => {
+    const cardConstStyles = {
+        flex: 1,
+        background: "#327AD9"
+    }
     return(
         <Box style={{ display: "flex", flexDirection: "row" }}>
-            <Card style={{flex: 1, margin: "2em 0 0 2em"}} height="medium" width="medium">
-                <CardHeader pad="medium">
+            <Card style={{...cardConstStyles, margin: "2em 0 0 2em"}} height="medium" width="large">
+                <CardHeader pad="small">
                     Design
-                    <Brush/>
+                    <Brush color="#1F4CA6"/>
                 </CardHeader>
                 <CardBody pad="medium">
                     I have been designing websites since I was 16 years old and started my journey into design,
@@ -17,30 +21,30 @@ const IntroductionComp = () => {
                     React framework. The concept of designing components that can be reused has been seriously intriguing.
                 </CardBody>
                 <CardFooter pad={{horizontal: "small"}} background="light-2">
-                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="plain" />} hoverIndicator label="Learn More" />       
+                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="#020659" />} hoverIndicator label="Learn More" />       
                 </CardFooter>
             </Card>
-            <Card style={{flex: 1, marginTop: "2em"}} height="medium" width="medium">
-                <CardHeader pad="medium">
+            <Card style={{...cardConstStyles, margin: "2em 2em 0 2em"}} height="medium" width="medium">
+                <CardHeader pad="small">
                     Programming
-                    <Code/>
+                    <Code color="#1F4CA6"/>
                 </CardHeader>
                 <CardBody pad="medium">
                     
                 </CardBody>
-                <CardFooter pad={{horizontal: "small"}} background="light-2">
-                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="plain" />} hoverIndicator label="Learn More" />
+                <CardFooter pad={{horizontal: "medium"}} background="light-2">
+                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="#020659" />} hoverIndicator label="Learn More" />
                 </CardFooter>
             </Card>
-            <Card style={{flex: 1, margin: "2em 2em 0 0"}} height="medium" width="medium">
-                <CardHeader pad="medium">
+            <Card style={{...cardConstStyles, margin: "2em 2em 2em 0"}} height="medium" width="medium">
+                <CardHeader pad="small">
                     Experience
-                    <Test/>
+                    <Test color="#1F4CA6"/>
                 </CardHeader>
                 <CardBody pad="medium">
                 </CardBody>
-                <CardFooter pad={{horizontal: "small"}} background="light-2">
-                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="plain" />} hoverIndicator label="Learn More" />
+                <CardFooter pad={{horizontal: "medium"}} background="light-2">
+                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="#020659" />} hoverIndicator label="Learn More" />
                 </CardFooter>
             </Card>
         </Box>

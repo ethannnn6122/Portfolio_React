@@ -7,13 +7,13 @@ const NavBar = () => {
     const [open, setOpen] = React.useState(false);
 
     const header ={
-        backgroundColor: "#4A1B8C",
+        backgroundColor: "#020659",
         display: "flex",
         flexDirection: "row",
         justifyContent: "flex-start"
     }
     const boxStyle = {
-        backgroundColor: "#5E308C"
+        backgroundColor: "#1F4CA6"
     }
     const sideBar = {
         display: "flex",
@@ -24,7 +24,8 @@ const NavBar = () => {
         color: "#D9AB9A",
         marginLeft: "2em",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        borderColor: "#1F4CA6"
     }
 
     return(

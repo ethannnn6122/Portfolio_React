@@ -1,6 +1,7 @@
 import { Grommet } from 'grommet';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomeContainer from './containers/HomeContainer';
+import ContactContainer from './containers/ContactContainer';
 
 const theme = {
   global: {
@@ -13,19 +14,21 @@ const theme = {
 };
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomeContainer/> 
+    },
+    {
+      path: "/contact",
+      element: <ContactContainer/>
+    }
+  ]);
+
   return (
     <Grommet theme={theme} full>
-      <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomeContainer/>}>
-              <Route path="/projects" element={null}/>
-              <Route path="/skills" element={null}/>
-              <Route path="contact" element={null}/>
-              <Route path="*" element={null}/>
-            </Route>
-          </Routes>
-      </BrowserRouter>
-   </Grommet> 
+      <RouterProvider router={router}/>
+    </Grommet> 
     
   );
 }
