@@ -2,6 +2,9 @@ import { Grommet } from 'grommet';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomeContainer from './containers/HomeContainer';
 import ContactContainer from './containers/ContactContainer';
+import ProjectContainer from './containers/ProjectContainer';
+import SkillContainer from './containers/SkillContainer';
+import AboutContainer from './containers/AboutContainer';
 
 const theme = {
   global: {
@@ -22,6 +25,18 @@ function App() {
     {
       path: "/contact",
       element: <ContactContainer/>
+    },
+    {
+      path: "/projects",
+      element: <ProjectContainer/>
+    },
+    {
+      path: "/skills",
+      element: <SkillContainer/>
+    },
+    {
+      path: "/about",
+      element: <AboutContainer/>
     }
   ]);
 

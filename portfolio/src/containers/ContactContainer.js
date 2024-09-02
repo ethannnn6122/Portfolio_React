@@ -31,7 +31,7 @@ const ContactContainer = () => {
         margin: "2em 12em 0 12em",
         padding: "3em",
         borderRadius: "2em",
-        backgroundColor: "rgba(68, 161, 242, 0.4)"
+        backgroundColor: "rgba(68, 161, 242, 0.7)"
     }
     const background = {
         backgroundPosition: 'center',
@@ -93,7 +93,7 @@ const ContactContainer = () => {
                         <TextArea id="text-input-id" name="message" /> 
                     </FormField>
                     <Box direction="row" gap="medium">
-                        <Button type="submit" primary label="Submit" style={{ backgroundColor:"#020659", 
+                        <Button type="submit" primary label="Send" style={{ backgroundColor:"#020659", 
                                                                             color:"#D9C091", border: "none" }} />
                         <Button type="reset" label="Reset" style={{color: "black"}} />
                     </Box>
