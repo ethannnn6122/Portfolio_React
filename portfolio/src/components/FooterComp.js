@@ -1,19 +1,21 @@
 import React from "react";
-import {Footer, Text, Anchor} from "grommet";
+import {Footer, Text} from "grommet";
+import { Link } from "react-router-dom";
 
 
 const FooterComp = () => {
     const footerStyle = {
-        marginTop: "2em",
+        marginTop: "1em",
         position: "fixed",
         width: "100%",
         bottom: "0"
     }
     return(
-        <Footer style={footerStyle} background="#020659" pad="small">
-            <Text>Mile High Coding 2024</Text>
-            <Anchor label="About" />
-            {/* <Text>By Bob Blasi; Coconino National Forest - San Francisco Peaks during winterUploaded by PDTillman, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=13386079</Text> */}
+        <Footer style={footerStyle} background="#61564E" pad="small">
+            <Text style={{color: "#46E0B5"}}>Mile High Coding 2024</Text>
+            <Link style={{textDecoration: "none", color: "#46E0B5"}} to="/about">
+                About
+            </Link>
         </Footer>
     );
 }

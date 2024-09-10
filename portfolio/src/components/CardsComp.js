@@ -5,83 +5,82 @@ import { Brush, Book, Code, Test} from "grommet-icons";
 import { Link } from "react-router-dom";
 
 const CardsComp = (props) => {
+    let iconColor = "#4E5A61";
     let boxStyles = {
         display: "flex",
         flexDirection: props.cardFlexPos,
         paddingBottom: "2em",
-        marginRight: "2em"
+        margin: "1em 2em 1em 1em"
     };
 
-    if (props.width < 1000 && props.width > 700 ) {
+    if (props.width < 1200 && props.width > 700 ) {
         boxStyles = {
             display: "flex", 
-            flexDirection: "column",
-            marginRight: "4em"
+            flexDirection: "column"
         }
     } 
     if (props.width < 700) {
         boxStyles = {
             display: "flex",
             flexDirection: "column",
-            marginRight: "2em",
+            margin: "1em 2em 1em 1em"
         }
     }
 
     return(
         <Box style={boxStyles}>
-            {console.log(props)}
             <Card style={props.styles.propStyles} height="medium" width="medium">
-                <CardHeader style={{backgroundColor: "#020659"}} pad="small">
+                <CardHeader style={{backgroundColor: "#46E0B5"}} pad="small">
                     {props.cardTitleOne}
-                    <Brush color="#1F4CA6"/>
+                    <Brush color={iconColor}/>
                 </CardHeader>
                 <CardBody pad="medium">
                     {props.cardOne}
                 </CardBody>
                 <CardFooter pad={{horizontal: "small"}} background="light-2">
                     <Link to="/projects">
-                        <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="#020659" />} hoverIndicator label="Learn More" />
+                        <Button style={{margin: "1em 0 1em 0"}} icon={<Book color={iconColor} />} hoverIndicator label="Learn More" />
                     </Link>
                 </CardFooter>
             </Card>
             <Card style={props.styles.propStyles} height="medium" width="medium">
-                <CardHeader style={{backgroundColor: "#020659"}} pad="small">
-                    Programming
-                    <Code color="#1F4CA6"/>
+                <CardHeader style={{backgroundColor: "#46E0B5"}} pad="small">
+                    {props.cardTitleTwo}
+                    <Code color={iconColor}/>
                 </CardHeader>
                 <CardBody pad="medium">
                     {props.cardTwo}
                 </CardBody>
                 <CardFooter pad={{horizontal: "medium"}} background="light-2">
                     <Link to="/projects">
-                        <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="#020659" />} hoverIndicator label="Learn More" />
+                        <Button style={{margin: "1em 0 1em 0"}} icon={<Book color={iconColor} />} hoverIndicator label="Learn More" />
                     </Link>
                 </CardFooter>
             </Card>
-            { props.width > 1000 ? <Card style={props.styles.propStyles}  height="medium" width="medium">
-                <CardHeader style={{backgroundColor: "#020659"}} pad="small">
-                    Experience
-                    <Test color="#1F4CA6"/>
+            { props.width > 1200 ? <Card style={props.styles.propStyles}  height="medium" width="medium">
+                <CardHeader style={{backgroundColor: "#46E0B5"}} pad="small">
+                    {props.cardTitleThree}
+                    <Test color={iconColor}/>
                 </CardHeader>
                 <CardBody pad="medium">
                     {props.cardThree}
                 </CardBody>
                 <CardFooter pad={{horizontal: "medium"}} background="light-2">
                 <Link to="/projects">
-                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="#020659" />} hoverIndicator label="Learn More" />
+                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color={iconColor} />} hoverIndicator label="Learn More" />
                 </Link>
                 </CardFooter>
             </Card>: <Card style={props.styles.propStyles} height="medium" width="medium">
-                <CardHeader style={{backgroundColor: "#020659"}} pad="small">
+                <CardHeader style={{backgroundColor: "#46E0B5"}} pad="small">
                     Experience
-                    <Test color="#1F4CA6"/>
+                    <Test color={iconColor}/>
                 </CardHeader>
                 <CardBody pad="medium">
                     {props.cardThree}
                 </CardBody>
                 <CardFooter pad={{horizontal: "medium"}} background="light-2">
                 <Link to="/projects">
-                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color="#020659" />} hoverIndicator label="Learn More" />
+                    <Button style={{margin: "1em 0 1em 0"}} icon={<Book color={iconColor} />} hoverIndicator label="Learn More" />
                 </Link>
                 </CardFooter>
             </Card>}

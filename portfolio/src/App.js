@@ -6,13 +6,16 @@ import ProjectContainer from './containers/ProjectContainer';
 import SkillContainer from './containers/SkillContainer';
 import AboutContainer from './containers/AboutContainer';
 
+
 const theme = {
   global: {
     font: {
       family: "Josefin Sans",
       size: "1.2em"
     },
-
+    colors: {
+      control: "#46A7E0"
+    }
   },
 };
 

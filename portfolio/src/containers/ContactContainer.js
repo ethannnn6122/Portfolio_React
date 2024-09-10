@@ -31,7 +31,7 @@ const ContactContainer = () => {
         margin: "2em 12em 0 12em",
         padding: "3em",
         borderRadius: "2em",
-        backgroundColor: "rgba(68, 161, 242, 0.7)"
+        backgroundColor: "rgba(70, 224, 181, 0.8)"
     }
     const background = {
         backgroundPosition: 'center',
@@ -62,7 +62,7 @@ const ContactContainer = () => {
                             (text) => {
                               if (text && text.length === 1)
                                 return 'Must be >1 character';
-                              return undefined;
+                              return valid;
                             },
                         ]}
                     >
@@ -74,7 +74,7 @@ const ContactContainer = () => {
                             (text) => {
                               if (text && text.length === 1)
                                 return 'Must be a valid email address';
-                              return undefined;
+                              return valid;
                             },
                         ]}
                     >
@@ -86,7 +86,7 @@ const ContactContainer = () => {
                             (text) => {
                               if (text && text.length === 1)
                                 return 'Must be >1 character';
-                              return undefined;
+                              return valid;
                             },
                         ]}
                     >
